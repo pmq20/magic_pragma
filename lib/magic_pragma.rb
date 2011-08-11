@@ -15,14 +15,17 @@ module AddMagicComment
     prefix = "#pragma #{pragma}\n"
     
     # TODO : add options for recursivity (and application of the script to a single file)
-    rbfiles = File.join(directory ,"**", "*.h", "*.hpp")
+    rbfiles = File.join(directory ,"**", "*.{h,hpp}")
     Dir.glob(rbfiles).each do |filename|
       file = File.new(filename, "r+")
       
       lines = file.readlines
       
       # remove current pragma once(s)
-      while lines[0] && lines[0].starts_with?("#pragma #{pragma}")
+      while lines[0] && (
+                lines[0].starts_with?("#pragma #{pragma}") ||
+		lines[0].strip == ""
+		)
         lines.shift
       end
 
@@ -33,7 +36,7 @@ module AddMagicComment
       file.puts(lines.join) 
       file.close
     end
-    p "\"#pragma once\" set for #{Dir.glob(rbfiles).count} header files"
+    print "\"#pragma once\" set for #{Dir.glob(rbfiles).count} header files\n"
   end
   
 end
