@@ -1,8 +1,4 @@
-## 0.0.1 (August 3, 2010)
+## 0.0.1 (August 11, 2011)
 
-Initial Version
+forked from magic_encoding 0.0.2 (August 3, 2010)
 
-## 0.0.2 (August 3, 2010)
-
-Existing magic comments are now erased before the file is prepended with the desired magic comment
-Bugfixes
