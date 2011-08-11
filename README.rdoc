@@ -5,7 +5,7 @@ add or modify the "#pragma once" that indicate header file
 should only be included once, which is a common task for C++
 programmers, for an entire directory structure.
 
-(Manuel Ryan)[https://github.com/m-ryan] originally wrote the (magic_encoding)[https://github.com/m-ryan/magic_encoding]
+[Manuel Ryan](https://github.com/m-ryan) originally wrote the [magic_encoding](https://github.com/m-ryan/magic_encoding)
 to get rid of "invalid multibyte char (US-ASCII)" error of ruby.
 I thought, hey! This little tool should also be useful to C++ programmers like me!
 So I forked it, changed it, used it on my C++ projects. Hope you don't mind Ryan :)
