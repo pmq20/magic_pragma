@@ -1,4 +1,4 @@
-# Easily add "#pragma once" to multiple ".h" and ".hpp" header files
+# Easily add "#pragma once" to multiple ".h" and ".hpp" and ".hxx" header files
 
 module AddMagicComment
   
@@ -15,7 +15,7 @@ module AddMagicComment
     prefix = "#pragma #{pragma}\n"
     
     # TODO : add options for recursivity (and application of the script to a single file)
-    rbfiles = File.join(directory ,"**", "*.{h,hpp}")
+    rbfiles = File.join(directory ,"**", "*.{h,hpp,hxx}")
     Dir.glob(rbfiles).each do |filename|
       file = File.new(filename, "r+")
       
