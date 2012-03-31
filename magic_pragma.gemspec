@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{magic_pragma}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.3.6") if s.respond_to? :required_rubygems_version=
   s.authors = ["P.S.V.R","Manuel Ryan"]
@@ -14,6 +14,6 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/pmq20/magic_pragma}
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.6}
-  s.summary = %q{Easily add "#pragma once" to multiple ".h" and ".hpp" header files}
+  s.summary = %q{Easily add "#pragma once" to multiple ".h" and ".hpp" and ".hxx" header files}
   
 end
